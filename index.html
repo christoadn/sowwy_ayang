@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maafin Ayang 🥺</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: pink;
+      background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      padding: 30px 10px;
+      font-size: 1.6em;
+      background-color: rgba(255, 105, 180, 0.7);
+      margin-bottom: 20px;
+    }
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+    }
+    .gif-container img {
+      width: 40vw;
+      max-width: 130px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #fff;
+    }
+    .buttons {
+      margin: 30px 0;
+    }
+    button {
+      padding: 12px 22px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+    }
+    #noBtn {
+      background-color: #888;
+      color: white;
+      position: relative;
+    }
+    .floating-heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+      background-size: cover;
+      animation: float 8s linear infinite;
+      opacity: 0.6;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      100% { transform: translateY(-100vh) translateX(20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Maafin acuwww yaww ayangg ngomonggg yangg ndaaa ndaaa ke kamuwww bikinnn kamuwww sakitt hatiiiiii huhuuhuhuhuhw 😢💔</h1>
+
+  <div class="gif-container">
+    <img src="bear1.gif" alt="bear1">
+    <img src="bear2.gif" alt="bear2">
+    <img src="bear3.gif" alt="bear3">
+    <img src="bear4.gif" alt="bear4">
+  </div>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="window.location.href='love.html'">Maafinn ayangg 💕</button>
+    <button id="noBtn" onclick="shrinkBtn()">Nda maafinn ayangg 😭</button>
+  </div>
+
+  <script>
+    let noBtn = document.getElementById("noBtn");
+    let yesBtn = document.getElementById("yesBtn");
+    let fontSizeNo = 16;
+    let fontSizeYes = 16;
+
+    function shrinkBtn() {
+      fontSizeNo -= 2;
+      fontSizeYes += 2;
+      if (fontSizeNo <= 8) {
+        noBtn.style.display = "none";
+      } else {
+        noBtn.style.fontSize = fontSizeNo + "px";
+      }
+      yesBtn.style.fontSize = fontSizeYes + "px";
+    }
+
+    // Floating hearts animation
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement("div");
+      heart.className = "floating-heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = Math.random() * 100 + "vh";
+      heart.style.animationDelay = (Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
